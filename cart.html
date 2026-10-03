@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart · Nadan Achar</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Malayalam:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar"><div class="topbar-track"><span>🚚 FREE SHIPPING above ₹599</span><span>🎁 Code NADAN10 for 10% off</span></div></div>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="logo-mark">🥒</span><span class="logo-text"><strong>Nadan Achar</strong><small>നാടൻ അച്ചാർ · Since 1972</small></span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">Our Story</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="cart.html" class="cart-icon">🛒 <span class="cart-count" id="cartCount">0</span></a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <h1>Your Cart</h1>
+    <p>Almost there! Review your pickles before checkout.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container cart-layout">
+    <div class="cart-items" id="cartItems"></div>
+    <aside class="cart-summary" id="cartSummary"></aside>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><div class="logo"><span class="logo-mark">🥒</span><span class="logo-text"><strong>Nadan Achar</strong><small>നാടൻ അച്ചാർ</small></span></div><p class="footer-about">Authentic Kerala pickles since 1972.</p><div class="socials"><a href="#">📘</a><a href="#">📷</a><a href="#">🐦</a><a href="#">▶️</a></div></div>
+    <div><h4>Shop</h4><a href="shop.html">All</a><a href="shop.html?cat=veg">Veg</a><a href="shop.html?cat=nonveg">Non-Veg</a><a href="shop.html?cat=combo">Combos</a></div>
+    <div><h4>Company</h4><a href="about.html">Story</a><a href="contact.html">Contact</a><a href="#">Blog</a></div>
+    <div><h4>Support</h4><a href="#">Shipping</a><a href="#">Returns</a><a href="#">FAQs</a></div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>© 2025 Nadan Achar.</p><div><a href="#">Privacy</a><a href="#">Terms</a></div></div></div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

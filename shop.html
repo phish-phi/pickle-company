@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All Pickles · Nadan Achar</title>
+<meta name="description" content="Buy authentic Kerala pickles online. Mango, Lime, Fish, Prawn, Garlic Achar & more. Free shipping above ₹599.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Malayalam:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== TOPBAR ===== -->
+<div class="topbar">
+  <div class="topbar-track">
+    <span>🚚 FREE SHIPPING above ₹599</span>
+    <span>🌿 100% Natural · No Preservatives</span>
+    <span>🎁 Code NADAN10 for 10% off</span>
+    <span>🏆 Trusted by 50,000+ families</span>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Nadan Achar Logo" class="logo-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <span class="logo-mark" style="display:none;">🥒</span>
+      <span class="logo-text">
+        <strong>Nadan Achar</strong>
+        <small>നാടൻ അച്ചാർ · Since 1972</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="cart.html" class="cart-icon">🛒 <span class="cart-count" id="cartCount">0</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="page-header">
+  <div class="container">
+    <h1>Shop All Pickles</h1>
+    <p>17 authentic Kerala pickles — made fresh every week in Thrissur.</p>
+  </div>
+</section>
+
+<!-- ===== QUICK CATEGORY TABS ===== -->
+<section class="quick-tabs">
+  <div class="container">
+    <div class="quick-tabs-inner">
+      <a href="shop.html" class="tab-btn">All Pickles</a>
+      <a href="shop.html?cat=veg" class="tab-btn">🥭 Vegetarian</a>
+      <a href="shop.html?cat=nonveg" class="tab-btn">🐟 Non-Veg</a>
+      <a href="shop.html?cat=combo" class="tab-btn">🎁 Combos</a>
+      <a href="shop.html?cat=spicy" class="tab-btn">🌶️ Extra Spicy</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHOP SECTION ===== -->
+<section class="section">
+  <div class="container shop-layout">
+
+    <!-- SIDEBAR FILTERS -->
+    <aside class="filters">
+      <h3>Filter</h3>
+
+      <div class="filter-group">
+        <h4>Category</h4>
+        <label><input type="radio" name="cat" value="all" checked> All Pickles</label>
+        <label><input type="radio" name="cat" value="veg"> Vegetarian</label>
+        <label><input type="radio" name="cat" value="nonveg"> Non-Veg</label>
+        <label><input type="radio" name="cat" value="combo"> Gift Combos</label>
+        <label><input type="radio" name="cat" value="spicy"> Extra Spicy</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Price</h4>
+        <label><input type="radio" name="price" value="all" checked> All Prices</label>
+        <label><input type="radio" name="price" value="low"> Under ₹300</label>
+        <label><input type="radio" name="price" value="mid"> ₹300 – ₹600</label>
+        <label><input type="radio" name="price" value="high"> Above ₹600</label>
+      </div>
+
+      <button class="btn btn-outline btn-full" onclick="resetFilters()">Reset Filters</button>
+    </aside>
+
+    <!-- PRODUCT GRID -->
+    <div class="shop-main">
+      <div class="shop-toolbar">
+        <span id="resultCount">Showing all pickles</span>
+        <select id="sortSelect">
+          <option value="popular">Sort: Popular</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter">
+  <div class="container newsletter-inner">
+    <div>
+      <h3>Get 10% Off Your First Order</h3>
+      <p>Join our family. Get recipes, offers & pickle stories straight to your inbox.</p>
+    </div>
+    <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo">
+        <img src="images/logo.png" alt="Nadan Achar" class="logo-img"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="logo-mark" style="display:none;">🥒</span>
+        <span class="logo-text">
+          <strong>Nadan Achar</strong>
+          <small>നാടൻ അച്ചാർ</small>
+        </span>
+      </div>
+      <p class="footer-about">Authentic Kerala pickles made the traditional way since 1972. From our family to yours.</p>
+      <div class="socials">
+        <a href="#">📘</a><a href="#">📷</a><a href="#">🐦</a><a href="#">▶️</a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Shop</h4>
+      <a href="shop.html">All Pickles</a>
+      <a href="shop.html?cat=veg">Vegetarian</a>
+      <a href="shop.html?cat=nonveg">Non-Veg</a>
+      <a href="shop.html?cat=combo">Gift Combos</a>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="#">Blog</a>
+      <a href="#">Bulk Orders</a>
+    </div>
+
+    <div>
+      <h4>Support</h4>
+      <a href="#">Shipping Info</a>
+      <a href="#">Returns</a>
+      <a href="#">FAQs</a>
+      <a href="#">Track Order</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2025 Nadan Achar. All rights reserved. Made with ❤️ in Kerala.</p>
+      <div><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
